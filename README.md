@@ -1,16 +1,94 @@
-# React + Vite
+# SecureVault Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern enterprise-grade file explorer built for SecureVault Inc. using React and TailwindCSS.
 
-Currently, two official plugins are available:
+This project was designed and developed as part of a frontend engineering challenge focused on recursive UI architecture, accessibility, and modern interaction design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 Live Application: YOUR_VERCEL_LINK
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Design File
+
+ Figma Design: 
+ https://www.figma.com/design/zYf2dRQIkQ2E0v8mLwUQhR/Secure-vault?node-id=0-1&p=f&t=BTRjcDJASYBjTk8L-0
+
+
+# Features
+
+## Recursive File Explorer
+- Fully recursive folder and file rendering
+- Supports deeply nested folder structures
+- Dynamic expand/collapse behavior
+
+## Keyboard Accessibility
+- Arrow Up / Down navigation
+- Arrow Right expands folders
+- Arrow Left collapses folders
+- Enter selects focused items
+
+## Properties Inspector
+Displays:
+- File name
+- File type
+- File size
+- Security metadata
+
+## Recursive Search & Auto Expand
+- Search filters files recursively
+- Parent folders auto-expand when matches are found
+- Improves navigation for deeply nested enterprise data
+
+## VS Code–Style Focus System
+- Selection persists independently from focus
+- Clicking outside removes visual focus while preserving selection
+
+---
+
+# Wildcard Feature
+
+## Smart Recursive Search + Auto Folder Expansion
+
+I implemented a recursive search system that automatically expands parent folders when nested matches are detected.
+
+### Why this adds value
+Enterprise users often work with deeply nested folder structures containing thousands of files. Automatically revealing matching paths significantly improves navigation speed and usability.
+
+This feature reduces the time required to locate sensitive files and improves the overall user experience for power users.
+
+---
+
+# Recursive Rendering Strategy
+
+The file explorer uses a recursive component architecture.
+
+Each folder node renders its own children using the same `TreeNode` component recursively. This allows the UI to support any depth of nested folders without requiring additional hardcoded levels.
+
+The recursive search system also traverses nested children dynamically to identify matching nodes and expand their parent folders automatically.
+
+---
+
+# Tech Stack
+
+- React
+- Vite
+- TailwindCSS
+
+---
+
+# Installation
+
+```bash
+npm install
+npm run dev
+
+# Run:
+
+```bash id="plslfe"
+git add .
+git commit -m "Write professional project documentation and README"
+git push

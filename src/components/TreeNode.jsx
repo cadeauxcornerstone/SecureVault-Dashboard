@@ -19,7 +19,7 @@ export default function TreeNode({
 
   function handleClick(e) {
     e.stopPropagation();
-    // separate focus state from selection state
+    
     setFocusedId(node.id);
 
     if (isFolder) {
@@ -33,7 +33,7 @@ export default function TreeNode({
     }
   }
 
-  // 🔥 ONLY SHOW FOCUS WHEN TREE IS ACTIVE (VS CODE BEHAVIOR)
+  //  ONLY SHOW FOCUS WHEN TREE IS ACTIVE (VS CODE BEHAVIOR)
   const showFocus = isFocused && treeActive;
 
   return (
@@ -66,9 +66,7 @@ export default function TreeNode({
           {node.name}
         </span>
       </div>
-          // recursive rendering for nested folders/files
-          //toggle folder expansion state 
-
+         
       {isFolder &&
         isExpanded &&
         node.children?.map((child) => (
