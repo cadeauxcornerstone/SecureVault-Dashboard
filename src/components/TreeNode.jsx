@@ -19,7 +19,7 @@ export default function TreeNode({
 
   function handleClick(e) {
     e.stopPropagation();
-
+    // separate focus state from selection state
     setFocusedId(node.id);
 
     if (isFolder) {
