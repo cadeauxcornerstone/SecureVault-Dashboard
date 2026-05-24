@@ -60,12 +60,14 @@ export default function TreeNode({
         <span>
           {isFolder ? (isExpanded ? "📂" : "📁") : "📄"}
         </span>
+        
 
         <span className="text-sm text-gray-200">
           {node.name}
         </span>
       </div>
-
+          // recursive rendering for nested folders/files
+          
       {isFolder &&
         isExpanded &&
         node.children?.map((child) => (
