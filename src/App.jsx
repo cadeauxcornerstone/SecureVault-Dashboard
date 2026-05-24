@@ -10,7 +10,7 @@ export default function App() {
 
   // 🔥 controls whether tree shows focus highlight
   const [treeActive, setTreeActive] = useState(true);
-
+  // keyboard navigation for accessibility support
   return (
     <div className="flex h-screen bg-[#0B1020] text-white">
 
