@@ -85,7 +85,7 @@ function SectionTitle({ title }) {
     </div>
   );
 }
-
+// Cyber-secure inspector panel styling 
 function InfoRow({ label, value }) {
   return (
     <div className="flex justify-between text-xs">
