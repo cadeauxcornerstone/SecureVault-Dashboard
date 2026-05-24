@@ -8,7 +8,7 @@ This project was designed and developed as part of a frontend engineering challe
 
 # Live Demo
 
-🔗 Live Application: YOUR_VERCEL_LINK
+🔗 Live Application: https://secure-vault-dashboard-zyld.vercel.app/
 
 ---
 
