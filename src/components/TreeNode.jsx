@@ -67,7 +67,8 @@ export default function TreeNode({
         </span>
       </div>
           // recursive rendering for nested folders/files
-          
+          //toggle folder expansion state 
+
       {isFolder &&
         isExpanded &&
         node.children?.map((child) => (
