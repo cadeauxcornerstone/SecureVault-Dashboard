@@ -2,7 +2,7 @@ import data from "../data/data.js";
 import TreeNode from "./TreeNode";
 import { useMemo, useEffect } from "react";
 
-/* 🔥 FLATTEN VISIBLE NODES */
+/*  FLATTEN VISIBLE NODES */
 function getVisibleNodes(nodes, expanded) {
   const result = [];
 
@@ -24,7 +24,7 @@ function getVisibleNodes(nodes, expanded) {
   return result;
 }
 
-/* 🔥 FIND PARENT (for ArrowLeft navigation) */
+/*  FIND PARENT (for ArrowLeft navigation) */
 function findParent(nodes, targetId, parent = null) {
   for (const node of nodes) {
     if (node.id === targetId) return parent;
@@ -51,14 +51,14 @@ export default function FileTree({
     return getVisibleNodes(data, expanded);
   }, [expanded]);
 
-  /* 🔥 AUTO FOCUS FIRST ITEM */
+  /*  AUTO FOCUS FIRST ITEM */
   useEffect(() => {
     if (!focusedId && visibleNodes.length > 0) {
       setFocusedId(visibleNodes[0].id);
     }
   }, [visibleNodes]);
 
-  /* 🔥 KEYBOARD HANDLER */
+  /*  KEYBOARD HANDLER */
   useEffect(() => {
     function onKeyDown(e) {
       if (!treeActive) return;
@@ -70,21 +70,21 @@ export default function FileTree({
       const current = visibleNodes[index];
       if (!current) return;
 
-      /* 🔽 DOWN */
+      /* DOWN */
       if (e.key === "ArrowDown") {
         e.preventDefault();
         const next = visibleNodes[index + 1];
         if (next) setFocusedId(next.id);
       }
 
-      /* 🔼 UP */
+      /* UP */
       if (e.key === "ArrowUp") {
         e.preventDefault();
         const prev = visibleNodes[index - 1];
         if (prev) setFocusedId(prev.id);
       }
 
-      /* ➡️ RIGHT (expand folder) */
+      /* RIGHT (expand folder) */
       if (e.key === "ArrowRight") {
         e.preventDefault();
 
@@ -97,7 +97,7 @@ export default function FileTree({
         }
       }
 
-      /* ⬅️ LEFT (collapse or go to parent) */
+      /* ⬅ LEFT (collapse or go to parent) */
       if (e.key === "ArrowLeft") {
         e.preventDefault();
 
